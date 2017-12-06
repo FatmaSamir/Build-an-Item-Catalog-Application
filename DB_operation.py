@@ -4,7 +4,9 @@ from sqlalchemy import create_engine
 
 from item_database_cat import Base, Category_table, Item, user_table
 
-engine = create_engine('sqlite:///categories_menu.db')
+url = "postgresql://graderdb:pasword@localhost:5432/catalogdb"
+
+engine = create_engine(url)
 
 Base.metadata.bind = engine
 
